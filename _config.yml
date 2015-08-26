@@ -1,10 +1,10 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title:       Nate Willard Engineering
+email:       nate.a.willard@gmail.com
+author:      Nate Willard
+description: "Works in progress eternal"
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "http://www.natewillard.com"
 date_format: "%b %-d, %Y"
 
 # Google services
@@ -22,12 +22,12 @@ show_social_icons:  false
 disqus_shortname:
 
 # Social icons
-github_username:
+github_username: RandomSeeded
 bitbucket_username:
-stackoverflow_id:
+stackoverflow_id: 3062972
 twitter_username:
 google_plus_id:
-linkedin_username:
+linkedin_username: natewillard
 angellist_username:
 medium_id:
 bitcoin_url:
