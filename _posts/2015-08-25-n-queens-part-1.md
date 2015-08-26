@@ -8,7 +8,7 @@ categories: n-queens javascript bitwise
 
 I recently came across [this tweet](https://twitter.com/ruanpethiyagoda/status/332992908565295104) by Hack Reactor’s Ruan Pethiyagoda.
 
-N-Queens (check out a description of the problem [here](https://en.wikipedia.org/wiki/N_queens), solved, bitwise, in JavaScript, in so few characters he still had room left-over for a comment shout-out. Impressive! Intimidating! …indecipherable?
+N-Queens (check out a description of the problem [here](https://en.wikipedia.org/wiki/N_queens), solved, bitwise, in JavaScript, in so few characters he still had room left-over for a comment shout-out. Impressive! Intimidating! ...indecipherable?
 
 Well, let’s unpack it and find out. With a few judicious line breaks, we get the much-improved function below:
 
