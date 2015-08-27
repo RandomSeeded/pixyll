@@ -38,3 +38,4 @@ Ruan simply calculates how the impact of placing that piece is going to affect L
 
 That's all folks! If you're interested in learning more, I highly recommend checking out the [paper this algorithm came from](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.51.7113&rep=rep1&type=pdf), as well as a [much cleaner Javascript implementation](http://gregtrowbridge.com/a-bitwise-solution-to-the-n-queens-problem-in-javascript/).
 
+
