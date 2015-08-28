@@ -8,7 +8,7 @@ url:         "http://www.natewillard.com"
 date_format: "%b %-d, %Y"
 
 # Google services
-google_analytics:
+google_analytics: UA-66886333-1
 google_verification:
 
 # Optional features
