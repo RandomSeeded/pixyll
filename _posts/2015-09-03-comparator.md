@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Sorting Collections in Backbone
+title:      Reverse Sorting Collections in Backbone
 date:       2015-09-03
 summary:    (Ab)using comparators
 categories: Backbone sorting javascript
