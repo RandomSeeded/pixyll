@@ -20,4 +20,7 @@ sleep 1
 nmcli n on
 {% endhighlight %}
 
+## Star it on github
+
+[You know you want to](https://github.com/RandomSeeded/Reset-Wifi)
 
