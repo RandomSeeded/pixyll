@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Reset wifi, the tiny bash script
-date:       2015-09-09
+date:       2015-09-15
 summary:    Because I need to do it 12 times a day
 categories: node-steam Steam Steam-guard javascript node
 ---
