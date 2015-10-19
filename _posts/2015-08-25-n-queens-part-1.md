@@ -52,4 +52,4 @@ Ruan uses this pattern in a couple of ways. First off, it represents a completed
 
 This is exactly the pattern Ruan uses in the next line, but this post is long enough already! Check in later for Part 2, which will cover leftDiagonal, rightDiagonal, poss and bit.
 
-**Update**: check out part 2 [here](http://www.natewillard.com/n-queens/javascript/bitwise/2015/08/26/n-queens-part-2/).
+**Update**: check out part 2 [here](/blog/n-queens/javascript/bitwise/2015/08/26/n-queens-part-2/).

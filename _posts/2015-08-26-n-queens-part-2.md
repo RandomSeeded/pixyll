@@ -6,7 +6,7 @@ summary:    Understanding Ruan Pethiyagoda's N-Queens Implementation
 categories: n-queens javascript bitwise
 ---
 
-This is a continuation of an [earlier post](http://www.natewillard.com/n-queens/javascript/bitwise/2015/08/25/n-queens-part-1/) on deciphering Ruan Pethiyagoda's N-Queens solution tweet, which you can check out [here](https://twitter.com/ruanpethiyagoda/status/332992908565295104).
+This is a continuation of an [earlier post](/blog/n-queens/javascript/bitwise/2015/08/25/n-queens-part-1/) on deciphering Ruan Pethiyagoda's N-Queens solution tweet, which you can check out [here](https://twitter.com/ruanpethiyagoda/status/332992908565295104).
 
 In the first post, we deciphered the meaning of `numSolutions`, `cols`, and `done`. This leaves us with `poss`, `bit`, `leftDiagonal`, and `rightDiagonal`.
 
