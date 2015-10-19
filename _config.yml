@@ -3,7 +3,7 @@ title:       Nate Willard Engineering
 email:       nate.a.willard@gmail.com
 author:      Nate Willard
 description: "Works in progress eternal"
-baseurl:     ""
+baseurl:     "/blog"
 url:         "http://www.natewillard.com"
 date_format: "%b %-d, %Y"
 
