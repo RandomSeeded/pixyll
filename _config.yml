@@ -4,7 +4,7 @@ email:       nate.a.willard@gmail.com
 author:      Nate Willard
 description: "Works in progress eternal"
 baseurl:     ""
-url:         "http://www.natewillard.com/"
+url:         "http://www.natewillard.com"
 date_format: "%b %-d, %Y"
 
 # Google services
