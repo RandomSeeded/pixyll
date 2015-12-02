@@ -4,7 +4,7 @@ title: Nate Willard
 permalink: /about/
 ---
 
-Works in progress eternal
+Software engineer by day, surfer by earlier in the day
 
 
 
