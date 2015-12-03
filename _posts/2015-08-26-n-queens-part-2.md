@@ -30,7 +30,7 @@ This `poss` variable is then used by `bit`, which uses the properties of [two's 
 
 After designating the column in which we want to place a piece (designated by `bit`), the algorithm still needs to step through to the next row. But how will we update the variables to reflect the fact that we've placed a piece?
 
-![N-Queens Diagram](/images/n_queens.png)
+![N-Queens Diagram](/blog/images/n_queens.png)
 
 Ruan simply calculates how the impact of placing that piece is going to affect LD, RD, and cols for the next row. `bit`, representing the piece to be added, is combined with each existing column representation of squares under attack. For diagonals, this "under attack" column representation is then shifted to the left/right by one bit, as the queen which attacks column B on a diagonal for row 2 will be attacking attacking different columns (C and A) when we advance to the next row.
 
