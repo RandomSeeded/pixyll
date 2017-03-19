@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Introducing Surf Alert
+title:      "Introducing Surf Alert"
 date:       2017-03-18 00:00:00
-summary:    Introducing: Surf Alerts
+summary:    Introducing - Surf Alerts
 categories: Erlang OTP nocss
 ---
 
