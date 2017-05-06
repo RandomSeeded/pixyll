@@ -29,7 +29,7 @@ caller_function() ->
 {% endhighlight %}
 
 Process:
-```erlang
+{% highlight erlang %}
 handle_cast(Request, State) ->
   % logic
   {stop, normal, State}
@@ -37,21 +37,21 @@ handle_cast(Request, State) ->
 do_something() ->
   supervisor:start_child(process_sup, [Arguments]),
   gen_server:cast(Pid, {get_emails, RegionId}).
-```
+{% endhighlight %}
 
 ## Use Case #2: Blocking, no return value required
 
 When to use: when you need to know if something completed successfully, but don't care about anything beyond that. For example, in SurfPings, this is used when clients subscribe. Given that we don't need a return value, we can actually handle all the logic in the `init` block of the child process, and just return `{stop, normal}` when we're done.
 
 Caller:
-```erlang
+{% highlight erlang %}
 handle(<<"POST">>, <<"/api/subscribe">>, Req0) ->
   % ...
   mongo_handler:add_email(Email, Region, Threshold, WithinPeriod),
-```
+{% endhighlight %}
 
 Process:
-```erlang
+{% highlight erlang %}
 add_email(Email, Region, Threshold, WithinPeriod) ->
   supervisor:start_child(mongo_handler_sup, [{add_email, Email, Region, Threshold, WithinPeriod}]).
 
@@ -59,7 +59,7 @@ init({add_email, Email, Region, Threshold, WithinPeriod}) ->
   {ok, DB} = establish_connection(),
   add_email_internal(DB, Email, Region, Threshold, WithinPeriod),
   {stop, normal}.
-```
+{% endhighlight %}
 
 You could also use `gen_server:call` after initializing the child process. See Use Case #3.
 
@@ -68,15 +68,15 @@ You could also use `gen_server:call` after initializing the child process. See U
 When to use: whenever you need to get a value synchrnously, but want to have the callee be in its own process for purposes of resiliency or architecture. In SurfPings, this is used when we retrieve emails. While this COULD be handled entirely within the `init` block, by returning `{stop, {data could go here]}`, this would be pretty poor practice and require co-opting `gen_server terminate/2` in order to get your return values. Instead, we start a child, and issue a `gen_server:call` to it. The return value is then returned from the child process via `{stop, Reason, Response, State}`.
 
 Caller:
-```erlang
+{% highlight erlang %}
 get_emails_for_region(RegionId) ->
   {ok, Pid} = supervisor:start_child(mongo_handler_sup, [{get_emails, RegionId}]),
   % note: passing parameters here is not necessary: all logic could be handled in the `handle_call`.
   gen_server:call(Pid, {get_emails, RegionId}).
-```
+{% endhighlight %}
 
 Process:
-```erlang
+{% highlight erlang %}
 init(_Args) ->
   % any state creating logic goes here (optional)
   {ok, State}.
@@ -84,7 +84,7 @@ init(_Args) ->
 handle_call({get_emails, RegionId}, _From, DB) ->
   EmailsForRegion = get_emails_internal(RegionId, DB),
   {stop, normal, EmailsForRegion, DB}.
-```
+{% endhighlight %}
 
 ## Use Case #4: Non-blocking, return value required (later)
 
