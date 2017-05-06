@@ -21,12 +21,12 @@ The **most important thing to note**: Erlang Processes stop when they have no mo
 When to use: background jobs! Set something going, don't care if it succeeds, but don't leave processes hanging around after they're done. Key point to implement this model is that the API function must init the child process, then use a `gen_server:cast`, which **must return** a `{stop, Reason, NewState}` tuple. If `{noreply, ...}` is used the child will not be removed from the supervisor tree when it's done running!
 
 Caller:
-```erlang
+{% highlight erlang %}
 caller_function() ->
   child_process:do_something(),
   % non-blocked logic happens here
   ok.
-```
+{% endhighlight %}
 
 Process:
 ```erlang
