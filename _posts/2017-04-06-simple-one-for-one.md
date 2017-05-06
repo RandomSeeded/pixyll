@@ -93,3 +93,7 @@ When to use: when you want to run jobs in parallel as background tasks, but need
 This requires no additional work as far as the child process, which will look exactly equivalent to Use Case #3. However, the caller will need to yield its `gen_server` with `rpc:nb_yield`.
 
 Alternate strategy: it is possible to use `gen_server:cast()`, manually sending a response, if you were to pass a `FromPID` as part of the message. Not as clean, not really recommended
+
+## Final thoughts
+
+Getting emails is always a blast. Feel free to [contact me](/blog/contact) with any questions!
