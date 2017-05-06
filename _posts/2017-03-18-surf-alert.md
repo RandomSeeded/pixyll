@@ -6,6 +6,12 @@ summary:    Introducing - Surf Alerts
 categories: Erlang OTP nocss
 ---
 
+## EDIT:
+
+SurfPings is now in a far more complete state! If you want a heads up when the forecast is lookin good, I highly recommend you [check it out](http://surfpings.com)!
+
+## Original:
+
 Mini post!
 
 [It's a thing](https://github.com/RandomSeeded/surf_alert).
