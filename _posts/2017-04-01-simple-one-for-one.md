@@ -90,8 +90,6 @@ handle_call({get_emails, RegionId}, _From, DB) ->
 
 When to use: when you want to run jobs in parallel as background tasks, but need to use the values they return. This is the `Promise.all()` of Erlang. For example, we could issue a DB query and an API query simultaneously, and then send emails after both child processes have completed.
 
-This requires no additional work as far as the child process, which will look exactly equivalent to Use Case #3. However, the caller will need to yield its `gen_server` call as follows:
-
-TODO (nw): yield example goes here
+This requires no additional work as far as the child process, which will look exactly equivalent to Use Case #3. However, the caller will need to yield its `gen_server` with `rpc:nb_yield`.
 
 Alternate strategy: it is possible to use `gen_server:cast()`, manually sending a response, if you were to pass a `FromPID` as part of the message. Not as clean, not really recommended
