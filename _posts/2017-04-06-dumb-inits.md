@@ -18,3 +18,7 @@ Its parent should be restarted, but shouldnt try again until the next day. What 
 
 In surf pings, what WOULD have happened if you put the API call in a gen_server:call? It would fail, and that would kill the parent. The parent would be restarted, but would not retry until the next day.
 
+Actually this is all completely irrelevant.
+
+What actually happened is: I had a dumb supervisor setting, and that killed everything, and then I was sad.
+
