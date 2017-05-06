@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:      "Introducing Surf Alert"
+title:      "Erlang Simple One For One Examples"
 date:       2017-03-18 00:00:00
-summary:    Erlang OTP Simple One For One Examples
-categories: Erlang OTP Surfpings
+summary:    Things I learned from SurfPings
+categories: Erlang OTP SurfPings
 ---
 
-As I was programming [surfpings](http://surfpings.com), I needed to be regularly creating dynamic processes with simple-one-for-one supervision. Examples of this include:
+As I was programming [SurfPings](http://surfpings.com), I needed to be regularly creating dynamic processes with simple-one-for-one supervision. Examples of this include:
 
 1. a new process for every db query
 2. a new process for every API call
@@ -41,7 +41,7 @@ do_something() ->
 
 ## Use Case #2: Blocking, no return value required
 
-When to use: when you need to know if something completed successfully, but don't care about anything beyond that. For example, in [surfpings](http://surfpings.com), this is used when clients subscribe. Given that we don't need a return value, we can actually handle all the logic in the `init` block of the child process, and just return `{stop, normal}` when we're done.
+When to use: when you need to know if something completed successfully, but don't care about anything beyond that. For example, in SurfPings, this is used when clients subscribe. Given that we don't need a return value, we can actually handle all the logic in the `init` block of the child process, and just return `{stop, normal}` when we're done.
 
 Caller:
 ```erlang
@@ -65,7 +65,7 @@ You could also use `gen_server:call` after initializing the child process. See U
 
 ## Use Case #3: Blocking, return value required
 
-When to use: whenever you need to get a value synchrnously, but want to have the callee be in its own process for purposes of resiliency or architecture. In surfpings, this is used when we retrieve emails. While this COULD be handled entirely within the `init` block, by returning `{stop, {data could go here]}`, this would be pretty poor practice and require co-opting `gen_server terminate/2` in order to get your return values. Instead, we start a child, and issue a `gen_server:call` to it. The return value is then returned from the child process via `{stop, Reason, Response, State}`.
+When to use: whenever you need to get a value synchrnously, but want to have the callee be in its own process for purposes of resiliency or architecture. In SurfPings, this is used when we retrieve emails. While this COULD be handled entirely within the `init` block, by returning `{stop, {data could go here]}`, this would be pretty poor practice and require co-opting `gen_server terminate/2` in order to get your return values. Instead, we start a child, and issue a `gen_server:call` to it. The return value is then returned from the child process via `{stop, Reason, Response, State}`.
 
 Caller:
 ```erlang
