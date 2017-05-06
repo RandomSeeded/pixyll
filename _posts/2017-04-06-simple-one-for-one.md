@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Erlang Simple One For One Examples"
-date:       2017-03-18 00:00:00
+date:       2017-04-06 00:00:00
 summary:    Things I learned from SurfPings
 categories: Erlang OTP SurfPings
 ---
